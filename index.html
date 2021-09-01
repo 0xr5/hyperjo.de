@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="de">
+  <!-- | by https://github.com/haze0001 | All other comments are from the original site | -->
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BB9W7VG42"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-5BB9W7VG42');
+  </script>
+  <!-- Hotjar Tracking Code for https://hyperjo.de/ -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () {
+        (h.hj.q = h.hj.q || []).push(arguments)
+      };
+      h._hjSettings = {hjid: 2116530, hjsv: 6};
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script');
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wir sind ein deutscher GTA Roleplay-Server basierend auf FiveM mit ausschließlich eigenen Scripts. Hier findest du alle Informationen, um direkt loszulegen." />
+  <title>Hyperjo.de | GTA Roleplay</title>
+  <link rel="icon" href="https://static.hyperjo.de/img/logo.svg">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "HowTo",
+      "name": "Auf den Server joinen",
+      "description": "Damit du bei uns spielen kannst musst du nur ein paar wenige Schritte befolgen.",
+      "step":[
+        {
+          "@type": "HowToStep",
+          "name": "GTA installieren",
+          "text": "Damit du starten kannst musst du GTA V kaufen, herunterladen und installieren."
+        }, {
+          "@type": "HowToStep",
+          "name": "FiveM installieren",
+          "text": "Gehe zu https://fivem.net, lade dir FiveM herunter und installiere es."
+        }, {
+          "@type": "HowToStep",
+          "name": "Server joinen",
+          "text": "Starte FiveM und suche unter \"Spielen\" nach Hyperjo."
+        }
+      ]
+    }
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web%4012.0.0/dist/material-components-web.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.14.0/css/free.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300">
+  <style>
+      :root {
+          --mdc-theme-primary: rgb(43 129 194);
+      }
+
+      body, html {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden
+      }
+
+      .scroll-container {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          margin: 0;
+          padding: 0
+      }
+
+      .scroll-container section {
+          width: 100%;
+          height: 100%
+      }
+
+      .dots {
+          z-index: 1;
+          list-style: none;
+          padding: 0;
+          position: absolute;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%)
+      }
+
+      .dots li {
+          position: relative;
+          height: 25px;
+          width: 25px;
+      }
+
+      .dots li:not(:first-child) {
+          margin-top: 5px;
+      }
+
+      .dots li a {
+          height: 25px;
+          width: 25px;
+          display: block;
+      }
+
+      .dots li a:before {
+          content: '';
+          position: absolute;
+          top: 7px;
+          right: 7px;
+          bottom: 7px;
+          left: 7px;
+          background: rgba(255, 255, 255, .48);
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          -webkit-transition: -webkit-transform .3s ease, background-color .3s ease;
+          -moz-transition: -moz-transform .3s ease, background-color .3s ease;
+          -ms-transition: -ms-transform .3s ease, background-color .3s ease;
+          -o-transition: -o-transform .3s ease, background-color .3s ease;
+          transition: transform .3s ease, background-color .3s ease
+      }
+
+      .dots li a.active:before {
+          content: '';
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          bottom: 5px;
+          left: 5px;
+          background: rgba(255, 255, 255, .9);
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -o-transform: scale(1);
+          transform: scale(1)
+      }
+
+      .dots-left {
+          left: 25px
+      }
+
+      .dots-right {
+          right: 10px
+      }
+  </style>
+  <style type="text/css">
+      html, body {
+          color: white;
+          font-family: 'Roboto';
+          text-align: center;
+      }
+
+      body {
+          font-size: 30px;
+      }
+
+      a {
+          font-family: inherit;
+          font-size: inherit;
+          line-height: inherit;
+          color: inherit;
+          text-decoration: none;
+      }
+
+      section, .flex {
+          box-sizing: border-box;
+          padding: 80px 10%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .section1 {
+          background-color: #2b81c2;
+          background: linear-gradient(-45deg, rgba(22, 25, 35, 0.35) 0%, rgba(22, 25, 35, 0.95) 100%) center center/100%, url(https://i.imgur.com/heDQcDq.jpg) center top/cover;
+      }
+
+      .section2 {
+          background-color: #161923;
+          background: linear-gradient(-45deg, rgba(22, 25, 35, 0.35) 0%, rgba(22, 25, 35, 0.95) 100%) center center/100%, url(https://fivem.net/17c4e5d0b35262c228dcf66c98365982.jpg) center top/cover;
+      }
+
+      .section3 {
+          background-color: #eb5736;
+          background: linear-gradient(-45deg, rgba(22, 25, 35, 0.35) 0%, rgba(22, 25, 35, 0.95) 100%) center center/100%, url(https://i.imgur.com/H5kmRxA.jpg) center top/cover;
+      }
+
+      .section4 {
+          background-color: #2b81c2;
+          background: linear-gradient(-45deg, rgba(22, 25, 35, 0.35) 0%, rgba(22, 25, 35, 0.95) 100%) center center/100%, url(https:///i.imgur.com/1W0CuPD.jpg) center top/cover;
+      }
+
+      .section5 {
+          background-color: #121212;
+          background: linear-gradient(-45deg, rgba(22, 25, 35, 0.35) 0%, rgba(22, 25, 35, 0.95) 100%) center center/100%, url(https://images6.alphacoders.com/553/thumb-1920-553248.jpg) center top/cover;
+      }
+
+      .section6 {
+          background-color: #369e19;
+          background: linear-gradient(-45deg, rgba(22, 25, 35, 0.35) 0%, rgba(22, 25, 35, 0.95) 100%) center center/100%, url(https://i.imgur.com/eErMbXz.jpg) center top/cover;
+      }
+
+      .section7 {
+          background-color: #2b81c2;
+          background: linear-gradient(-45deg, rgba(22, 25, 35, 0.35) 0%, rgba(22, 25, 35, 0.95) 100%) center center/100%, url(https://www.setaswall.com/wp-content/uploads/2017/03/Grand-Theft-Auto-V-4K-Wallpaper-3840x2160.jpg) center top/cover;
+      }
+
+      .title {
+          font-weight: 400;
+      }
+
+      .navbar {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          left: 15px;
+          height: 50px;
+          z-index: 1;
+          color: rgba(255, 255, 255, .75);
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          overflow: hidden;
+      }
+
+      #logo {
+          height: 100%;
+      }
+
+      #logoText {
+          margin-left: 15px;
+          line-height: 50px;
+          font-size: 40px;
+          font-weight: 300;
+          user-select: none;
+      }
+
+      .navbar a {
+          position: relative;
+          margin-left: 20px;
+          line-height: 50px;
+          font-size: 20px;
+          font-weight: 300;
+          white-space: nowrap;
+          user-select: none;
+      }
+
+      .navbar a:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: #FFF;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all .3s ease-out;
+      }
+
+      .navbar a:hover {
+          color: white;
+      }
+
+      .navbar a:hover:before {
+          visibility: visible;
+          transform: scaleX(1);
+      }
+
+      #scrollHint {
+          z-index: 1;
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          user-select: none;
+          color: rgba(255, 255, 255, .5);
+          transition: .3s;
+      }
+
+      #handy {
+          max-height: 60%;
+      }
+
+      @media (max-width: 700px) {
+          #handy {
+              display: none;
+          }
+
+          #handy + p {
+              margin-left: inherit;
+          }
+      }
+
+      .section5 > div {
+          box-sizing: border-box;
+          width: 50%;
+          padding: 10px;
+          overflow: hidden;
+      }
+
+      .section5 > div > *:first-child {
+          margin-top: auto;
+      }
+
+      .section5 > div > *:last-child {
+          margin-bottom: auto;
+      }
+
+      .section5 img {
+          max-height: 30vh;
+          max-width: 100%;
+          border-radius: 5px;
+          filter: contrast(0.75);
+          transition: filter .2s ease;
+      }
+
+      .section5 img:hover {
+          filter: contrast(1);
+      }
+
+      .section5 p {
+          margin: 0;
+          padding-bottom: 5px;
+      }
+
+      @media (max-width: 800px) {
+          .onlyDesktop {
+              display: none;
+          }
+
+          .section5 > div {
+              width: 100%;
+          }
+
+          #discordLink {
+              margin-left: auto;
+          }
+      }
+  </style>
+</head>
+<body>
+<div class="navbar">
+  <img id="logo" src="https://static.hyperjo.de/img/logo.svg" alt="Logo">
+  <span id="logoText">Hyperjo.de</span>
+  <a class="onlyDesktop" id="play" style="margin-left: auto" href="fivem://connect/hyperjo.de">Spielen</a>
+  <a class="onlyDesktop" href="ts3server_/ts.hyperjo.html">TeamSpeak</a>
+  <a id="discordLink" href="http://discord.hyperjo.de/" target="_blank">Discord</a>
+  <a class="onlyDesktop" href="https://twitter.com/HyperjoDE" target="_blank">Twitter</a>
+  <!--<a href="rules" target="_blank">Regeln</a>-->
+</div>
+</div>
+<div id="main" class="scroll-container">
+  <section class="section1">
+    <span class="title mdc-typography--headline2">Hey!</span>
+    <p>Wir sind ein deutscher GTA Roleplay-Server. Interesse? Infos gibt's hier...</p>
+    <div>
+      <a class="mdc-button mdc-button--raised" onclick="window.location.href = 'fivem://connect/hyperjo.de'" style="background-color: #f40552bf">
+        <div class="mdc-button__ripple"></div>
+        <i class="material-icons mdc-button__icon" aria-hidden="true">send</i>
+        <span class="mdc-button__label">Jetzt spielen</span>
+      </a>
+      <a class="mdc-button mdc-button--raised" onclick="window.location.href = 'http://discord.hyperjo.de/'" style="background-color: #7289da">
+        <div class="mdc-button__ripple"></div>
+        <i class="material-icons mdc-button__icon" aria-hidden="true">send</i>
+        <span class="mdc-button__label">Discord</span>
+      </a>
+    </div>
+  </section>
+  <section class="section2">
+    <span class="title mdc-typography--headline2">FiveM</span>
+    <p>Unser Server basiert auf der Mod FiveM, die es ermöglicht, eigene GTA-Server zu erstellen. Weitere Informationen zu FiveM findest du unter <a href="https://fivem.net/">fivem.net</a>.</p>
+    <a class="mdc-button mdc-button--raised" href="https://fivem.net/">
+      <div class="mdc-button__ripple"></div>
+      <i class="material-icons mdc-button__icon" aria-hidden="true">information</i>
+      <span class="mdc-button__label">Weitere Informationen</span>
+    </a>
+  </section>
+  <section class="section3">
+    <span class="title mdc-typography--headline2">Roleplay</span>
+    <p>Ziehe nach Los Santos und verkörpere deine Rolle. Über den Sprachchat kannst du mit anderen Spielern verrückte, witzige und spannende Situationen erleben.</p>
+  </section>
+  <section class="section4" style="flex-direction: row">
+    <img src="https://i.imgur.com/0jZlMPO.png" id="handy">
+    <div class="flex">
+      <span class="title mdc-typography--headline2">Ideen</span>
+      <p style="margin-left: 10px;">Profitiere von unserer Erfahrung. Wir legen extremen Wert auf eigene Ideen und leben uns kreativ auf unserem Server aus. Und genau das spüren auch unsere Spieler, die wir aktiv
+        in die Entwicklung mit einbinden.</p>
+    </div>
+  </section>
+  <section class="section5" style="flex-direction: row; flex-wrap: wrap; align-content: center">
+    <div>
+      <img src="https://i.imgur.com/tt9lle1.jpg">
+      <!--<p>Entdecke</p>-->
+    </div>
+    <div>
+      <!--<img src="https://i.imgur.com/e5695xr.jpg">-->
+      <p>Wir haben einen eigenen Shop, der perfekt in unser Inventar-System integriert ist.</p>
+    </div>
+    <div class="onlyDesktop">
+      <!--<img src="https://i.imgur.com/wqhBYeg.jpg">-->
+      <p>Außerdem haben wir einen eigenen Kleidungsladen, bei dem du alle deine Kleidungsstücke mit Vorschau anprobieren und dann kaufen kannst.</p>
+    </div>
+    <div class="onlyDesktop">
+      <img src="https://i.imgur.com/68BMxaJ.jpg">
+      <!--<p>Features!</p>-->
+    </div>
+  </section>
+  <section class="section6">
+    <span class="title mdc-typography--headline2">Los geht's!</span>
+    <p>Wenn du also mal vorbeischauen und ein Teil von uns werden willst, freuen wir uns auf dich!</p>
+    <a class="mdc-button mdc-button--raised" onclick="window.location.href = 'fivem://connect/hyperjo.de'" style="background-color: #f40552bf">
+      <div class="mdc-button__ripple"></div>
+      <i class="material-icons mdc-button__icon" aria-hidden="true">send</i>
+      <span class="mdc-button__label">Jetzt spielen</span>
+    </a>
+  </section>
+  <section class="section7">
+    <span class="title mdc-typography--headline2">Folge uns!</span>
+    <p>So kannst du immer auf dem aktuellsten Stand bleiben :)</p>
+    <style>
+        .socialMediaLinks {
+            display: flex;
+        }
+
+        .socialMediaLinks > * {
+            height: 80px;
+            width: 80px;
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, .5);
+            border-radius: 50%;
+        }
+
+        .socialMediaLinks > *:not(:first-child) {
+            margin-left: 10px;
+        }
+
+        .socialMediaLinks > * > i {
+            font-size: 50px;
+            line-height: 75px;
+        }
+    </style>
+    <div class="socialMediaLinks">
+      <a href="ts3server_/ts.hyperjo.html"><i class="fab fa-teamspeak"></i></a>
+      <a href="https://discord.gg/zyZDRFr" target="_blank"><i class="fab fa-discord"></i></a>
+      <a href="https://twitter.com/HyperjoDE" target="_blank"><i class="fab fa-twitter"></i></a>
+      <!--<a href="rules" target="_blank"><i class="fas fa-gavel"></i></a>-->
+    </div>
+  </section>
+</div>
+<i class="material-icons" id="scrollHint" aria-hidden="true">mouse</i>
+<script src="https://unpkg.com/material-components-web%4012.0.0/dist/material-components-web.min.js"></script>
+<script>
+  (function () {
+    'use strict';
+    var fullScroll = function (params) {
+      var main = document.getElementById('main');
+      var sections = main.getElementsByTagName('section');
+      var defaults = {
+        container: main,
+        sections: sections,
+        animateTime: params.animateTime || 0.7,
+        animateFunction: params.animateFunction || 'ease',
+        maxPosition: sections.length - 1,
+        currentPosition: 0,
+        displayDots: typeof params.displayDots != 'undefined' ? params.displayDots : true,
+        dotsPosition: params.dotsPosition || 'left'
+      };
+      this.defaults = defaults;
+      this.init();
+    };
+    fullScroll.prototype.init = function () {
+      this.buildSections().buildDots().buildPublicFunctions().addEvents();
+      var anchor = location.hash.replace('#', '').split('index.html')[0];
+      location.hash = 0;
+      this.changeCurrentPosition(anchor);
+    };
+    fullScroll.prototype.buildSections = function () {
+      var sections = this.defaults.sections;
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].setAttribute('data-index', i);
+      }
+      return this;
+    };
+    fullScroll.prototype.buildDots = function () {
+      this.ul = document.createElement('ul');
+      this.ul.classList.add('dots');
+      this.ul.classList.add(this.defaults.dotsPosition == 'right' ? 'dots-right' : 'dots-left');
+      var _self = this;
+      var sections = this.defaults.sections;
+      for (var i = 0; i < sections.length; i++) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.setAttribute('href', '#' + i);
+        li.appendChild(a);
+        _self.ul.appendChild(li);
+      }
+      this.ul.childNodes[0].firstChild.classList.add('active');
+      if (this.defaults.displayDots) {
+        document.body.appendChild(this.ul);
+      }
+      return this;
+    };
+    fullScroll.prototype.addEvents = function () {
+      if (document.addEventListener) {
+        document.addEventListener('mousewheel', this.mouseWheelAndKey, false);
+        document.addEventListener('wheel', this.mouseWheelAndKey, false);
+        document.addEventListener('keyup', this.mouseWheelAndKey, false);
+        document.addEventListener('touchstart', this.touchStart, false);
+        document.addEventListener('touchend', this.touchEnd, false);
+        window.addEventListener("hashchange", this.hashChange, false);
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          if (!('ontouchstart' in window)) {
+            document.body.style = "overflow: scroll;";
+            document.documentElement.style = "overflow: scroll;";
+          }
+        }
+      } else {
+        document.attachEvent('onmousewheel', this.mouseWheelAndKey, false);
+        document.attachEvent('onkeyup', this.mouseWheelAndKey, false);
+      }
+      return this;
+    };
+    fullScroll.prototype.buildPublicFunctions = function () {
+      var mTouchStart = 0;
+      var mTouchEnd = 0;
+      var _self = this;
+      this.mouseWheelAndKey = function (event) {
+        if (event.deltaY > 0 || event.keyCode == 40) {
+          _self.defaults.currentPosition++;
+          _self.changeCurrentPosition(_self.defaults.currentPosition);
+        } else if (event.deltaY < 0 || event.keyCode == 38) {
+          _self.defaults.currentPosition--;
+          _self.changeCurrentPosition(_self.defaults.currentPosition);
+        }
+        _self.removeEvents();
+      };
+      this.touchStart = function (event) {
+        mTouchStart = parseInt(event.changedTouches[0].clientY);
+        mTouchEnd = 0;
+      };
+      this.touchEnd = function (event) {
+        mTouchEnd = parseInt(event.changedTouches[0].clientY);
+        if (mTouchEnd - mTouchStart > 100 || mTouchStart - mTouchEnd > 100) {
+          if (mTouchEnd > mTouchStart) {
+            _self.defaults.currentPosition--;
+          } else {
+            _self.defaults.currentPosition++;
+          }
+          _self.changeCurrentPosition(_self.defaults.currentPosition);
+        }
+      };
+      this.hashChange = function (event) {
+        if (location) {
+          var anchor = location.hash.replace('#', '').split('index.html')[0];
+          if (anchor !== "") {
+            if (anchor < 0) {
+              _self.changeCurrentPosition(0);
+            } else if (anchor > _self.defaults.maxPosition) {
+              _self.changeCurrentPosition(_self.defaults.maxPosition);
+            } else {
+              _self.defaults.currentPosition = anchor;
+              _self.animateScroll();
+            }
+          }
+        }
+      };
+      this.removeEvents = function () {
+        if (document.addEventListener) {
+          document.removeEventListener('mousewheel', this.mouseWheelAndKey, false);
+          document.removeEventListener('wheel', this.mouseWheelAndKey, false);
+          document.removeEventListener('keyup', this.mouseWheelAndKey, false);
+          document.removeEventListener('touchstart', this.touchStart, false);
+          document.removeEventListener('touchend', this.touchEnd, false);
+        } else {
+          document.detachEvent('onmousewheel', this.mouseWheelAndKey, false);
+          document.detachEvent('onkeyup', this.mouseWheelAndKey, false);
+        }
+        setTimeout(function () {
+          _self.addEvents();
+        }, 600);
+      };
+      this.animateScroll = function () {
+        var animateTime = this.defaults.animateTime;
+        var animateFunction = this.defaults.animateFunction;
+        var position = this.defaults.currentPosition * 100;
+        this.defaults.container.style.webkitTransform = 'translateY(-' + position + '%)';
+        this.defaults.container.style.mozTransform = 'translateY(-' + position + '%)';
+        this.defaults.container.style.msTransform = 'translateY(-' + position + '%)';
+        this.defaults.container.style.transform = 'translateY(-' + position + '%)';
+        this.defaults.container.style.webkitTransition = 'all ' + animateTime + 's ' + animateFunction;
+        this.defaults.container.style.mozTransition = 'all ' + animateTime + 's ' + animateFunction;
+        this.defaults.container.style.msTransition = 'all ' + animateTime + 's ' + animateFunction;
+        this.defaults.container.style.transition = 'all ' + animateTime + 's ' + animateFunction;
+        for (var i = 0; i < this.ul.childNodes.length; i++) {
+          this.ul.childNodes[i].firstChild.classList.remove('active');
+          if (i == this.defaults.currentPosition) {
+            this.ul.childNodes[i].firstChild.classList.add('active');
+          }
+        }
+      };
+      this.changeCurrentPosition = function (position) {
+        if (position !== "") {
+          _self.defaults.currentPosition = position;
+          location.hash = _self.defaults.currentPosition;
+        }
+      };
+      return this;
+    };
+    window.fullScroll = fullScroll;
+  })();
+</script>
+<script type="text/javascript">
+  new fullScroll({
+    displayDots: true,
+    dotsPosition: 'right',
+    animateTime: 0.8,
+    animateFunction: 'ease'
+  });
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$.get('https://api.hyperjo.de/?property=playercount', (playercount) => {
+	if (playercount >= 25)
+		$('#play').html("Spielen (" + playercount + " Spieler online)");
+});
+</script>
+</body>
+
+</html>
