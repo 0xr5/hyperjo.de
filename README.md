@@ -9,7 +9,7 @@
   <p align="center">
     Der Source Code der offiziellen Hyperjo.de Webseite.
     <br />
-    <a href="https://hyperjo.de"><strong>Demo ›</strong></a>
+    <a href="https://hyperjo.de" target="_blank"><strong>Demo ›</strong></a>
     <br />
     <br />
 
